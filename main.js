@@ -18,7 +18,7 @@ $scope.subtotal = function() {
 return $scope.totalCart() - $scope.bill.discount;
 };
 function calculateDiscount(newValue, oldValue, scope) {
-$scope.bill.discount = newValue > 100 ? 10 : 0;
+$scope.bill.discount = newValue > 100 ? 10 : 5;
 }
 $scope.$watch($scope.totalCart, calculateDiscount);
 })
