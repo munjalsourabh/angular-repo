@@ -1,0 +1,15 @@
+<html ng-app="CartApp">
+<div ng-controller="CartController">
+<div ng-repeat="item in items">
+<span>{{item.title}}</span>
+<input ng-model="item.quantity">
+<span>{{item.price | currency}}</span>
+<span>{{item.price * item.quantity | currency}}</span>
+</div>
+<div>Total: {{totalCart() | currency}}</div>
+<div>Discount: {{bill.discount | currency}}</div>
+<div>Subtotal: {{subtotal() | currency}}</div>
+</div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</html>
